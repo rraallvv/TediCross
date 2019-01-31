@@ -34,7 +34,7 @@ migrateSettingsToYAML(settingsPathJSON, settingsPathYAML);
 const settings = Settings.fromFile(settingsPathYAML);
 
 // Initialize logger
-const logger = new Logger(settings.debug);
+const logger = new Logger(settings.debug, settings.logFile);
 
 // Save the settings, as they might have changed
 settings.toFile(settingsPathYAML);
